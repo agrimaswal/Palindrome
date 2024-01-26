@@ -1,0 +1,24 @@
+
+class Solution
+{
+    public String is_palindrome(int n)
+    {
+        if(!ispallindrome(n)){
+            return "No";
+        }
+        
+        return "Yes";
+       
+    }
+    public boolean ispallindrome(int num){
+         int original=num;
+        int reverse=0;
+        while(num>0){
+            int digit=num%10;
+          reverse=reverse*10+digit;
+          num/=10;
+        }
+        return original==reverse;
+    }
+    
+}
